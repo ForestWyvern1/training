@@ -16,6 +16,7 @@ class SplashActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        handler()
     }
 
     private fun handler() {
