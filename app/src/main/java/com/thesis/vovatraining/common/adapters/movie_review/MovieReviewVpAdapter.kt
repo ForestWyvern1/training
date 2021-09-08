@@ -32,14 +32,15 @@ class MovieReviewVpAdapter(
         binding.movieReviewText.text = item.original_title
 
         val voteAverage = item.vote_average
-        if (voteAverage.contains("."))
-            binding.movieRateText.text = voteAverage
-        else
-            binding.movieRateText.text = String.format(
-                Locale.getDefault(),
-                "%s.0",
+        binding.movieRateText.text =
+            if (voteAverage.contains("."))
                 voteAverage
-            )
+            else
+                String.format(
+                    Locale.getDefault(),
+                    "%s.0",
+                    voteAverage
+                )
 //        binding.movieRateText.text =
 //            String.format(
 //                Locale.getDefault(),
