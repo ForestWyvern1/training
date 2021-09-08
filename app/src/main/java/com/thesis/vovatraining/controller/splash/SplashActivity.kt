@@ -1,7 +1,5 @@
 package com.thesis.vovatraining.controller.splash
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.thesis.vovatraining.common.base.activity.BaseActivity
@@ -20,6 +18,6 @@ class SplashActivity : BaseActivity() {
     }
 
     private fun handler() {
-        Handler().postDelayed({startActivityWithFinish(MainActivity::class.java)}, 2000)
+        Handler().postDelayed({ startActivityWithFinish(MainActivity::class.java) }, 2000)
     }
 }

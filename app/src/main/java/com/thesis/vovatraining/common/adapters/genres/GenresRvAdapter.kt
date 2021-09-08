@@ -10,7 +10,12 @@ import com.thesis.vovatraining.R
 import com.thesis.vovatraining.databinding.RvGenresMainBinding
 import com.thesis.vovatraining.model.genres.Genres
 
-class GenresRvAdapter(private val context: Context, private val list: List<Genres>) : RecyclerView.Adapter<GenresRvAdapter.ViewHolder>() {
+class GenresRvAdapter(
+    private val context: Context,
+    private val list: List<Genres>
+) : RecyclerView.Adapter<GenresRvAdapter.ViewHolder>() {
+
+    private lateinit var binding: RvGenresMainBinding
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
         ViewHolder(
@@ -18,8 +23,6 @@ class GenresRvAdapter(private val context: Context, private val list: List<Genre
                 .from(context)
                 .inflate(R.layout.rv_genres_main, parent, false)
         )
-
-    private lateinit var binding: RvGenresMainBinding
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         binding = RvGenresMainBinding.bind(holder.itemView)

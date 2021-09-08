@@ -31,31 +31,29 @@
         android:id="@+id/actualsRvMainActivity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/searchMainActivity"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
-
-    <ProgressBar
-        android:id="@+id/genresPbMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        app:layout_constraintTop_toBottomOf="@id/actualsRvMainActivity"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/searchMainActivity" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/genresRvMainActivity"
         android:layout_width="0dp"
-        android:paddingStart="10dp"
-        android:visibility="gone"
-        android:clipToPadding="false"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/actualsRvMainActivity"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:clipToPadding="false"
+        android:paddingStart="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actualsRvMainActivity" />
 
-
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/movieReviewVpMainActivity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/genresRvMainActivity" />
 </androidx.constraintlayout.widget.ConstraintLayout>

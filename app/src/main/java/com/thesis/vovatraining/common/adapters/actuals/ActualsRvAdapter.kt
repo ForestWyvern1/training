@@ -10,7 +10,8 @@ import com.thesis.vovatraining.databinding.RvActualsMainBinding
 
 class ActualsRvAdapter(
     private val context: Context,
-    private val list: List<String>
+    private val list: List<String>,
+    private val onSelect: (actual: Int) -> Unit
 ) : RecyclerView.Adapter<ActualsRvAdapter.ViewHolder>() {
 
     private var currentPosition = 0
@@ -36,6 +37,7 @@ class ActualsRvAdapter(
         position: Int
     ) {
         binding = RvActualsMainBinding.bind(holder.itemView)
+
         binding.textRvActuals.text = list[position]
 
         if (currentPosition == position) {
@@ -48,6 +50,7 @@ class ActualsRvAdapter(
 
         binding.root.setOnClickListener {
             currentPosition = position
+            onSelect(currentPosition)
 
             notifyDataSetChanged()
         }
